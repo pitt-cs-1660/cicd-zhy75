@@ -75,7 +75,7 @@ jobs:
         name: Authenticate to GCP
         with:
           project_id: 'cs2060-cici-cc-compose' # update with your project ID
-          workload_identity_provider: 'projects/709344046228/locations/global/workloadIdentityPools/github-actions/providers/dansc0de' # update with your Workload Identity Pool
+          workload_identity_provider: 'projects/709344046228/locations/global/workloadIdentityPools/github-actions/providers/zhy75' # update with your Workload Identity Pool
 
       # configure/login with docker
       - name: gcloud Configure Docker
@@ -94,4 +94,4 @@ jobs:
           context: ./
           file: ./Dockerfile
           push: true
-          tags: us-east1-docker.pkg.dev/cs2060-cicd-cc-compose/cicd-zhy75/fastapi-server:v2
+          tags: us-east1-docker.pkg.dev/cc-spring2025/dansc0de/fastapi-server:v2
