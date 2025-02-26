@@ -33,6 +33,3 @@ In this assignment, you will gain hands-on experience with Docker, Google Cloud 
 
 ## Submission
 Push all your code to the `main` branch of your Github repo, submit your GitHub project link to Canvas:
-
-
-This is a test
