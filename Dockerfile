@@ -15,6 +15,9 @@ WORKDIR /app
 COPY --from=builder /app /app
 EXPOSE 8000/tcp
 COPY entrypoint.sh /app/entrypoint.sh
+RUN pip install uvicorn
+RUN pip install fastapi
+RUN pip install psycopg2
 
 ENTRYPOINT ["/app/entrypoint.sh"]
 
