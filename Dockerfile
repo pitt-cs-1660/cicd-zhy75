@@ -12,7 +12,6 @@ FROM python:3.11-buster AS app
 WORKDIR /app
 
 COPY --from=builder /app /app
-COPY entrypoint.sh /app/entrypoint.sh
 
 EXPOSE 8000
 
