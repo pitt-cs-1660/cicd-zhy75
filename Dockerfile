@@ -13,11 +13,16 @@ FROM python:3.11-buster AS app
 WORKDIR /app
 
 COPY --from=builder /app /app
+RUN pip install --upgrade pip && pip install poetry
+
+COPY pyproject.toml /app/pyproject.toml
+COPY poetry.lock /app/poetry.lock
+
+RUN poetry config virtualenvs.create false \
+    && poetry install --no-root --no-interaction --no-ansi
+
 EXPOSE 8000/tcp
 COPY entrypoint.sh /app/entrypoint.sh
-RUN pip install uvicorn
-RUN pip install fastapi
-RUN pip install psycopg2
 
 ENTRYPOINT ["/app/entrypoint.sh"]
 
