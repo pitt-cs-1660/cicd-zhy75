@@ -13,7 +13,7 @@ FROM python:3.11-buster AS app
 WORKDIR /app
 
 COPY --from=builder /app /app
-EXPOSE 8000
+EXPOSE 8000/tcp
 COPY entrypoint.sh /app/entrypoint.sh
 
 ENTRYPOINT ["/app/entrypoint.sh"]
