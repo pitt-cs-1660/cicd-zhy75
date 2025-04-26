@@ -77,7 +77,7 @@ jobs:
           project_id: 'cicd-458002' # update with your project ID
           workload_identity_provider: 'projects/414879107618/locations/global/workloadIdentityPools/github/providers/my-repo' # update with your Workload Identity Pool
 
-      # configure/login with docker
+      # configure/login with dockers
       - name: gcloud Configure Docker
         run: gcloud auth configure-docker us-central1-docker.pkg.dev
 
